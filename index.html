@@ -67,7 +67,7 @@
         </div>
       </div>
 
-      <!-- Mode Switch Tabs -->
+      <!-- Mode Switch Tabs (Đã ẩn toàn bộ nút tải Code để bảo mật bản quyền khi bán cho khách) -->
       <div class="flex flex-wrap items-center gap-1.5 bg-slate-950/90 p-1 rounded-xl border border-slate-800">
         <button id="tabBtnEditor" type="button" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-orange-500 text-white shadow">
           ✨ Edit Hàng Loạt (Phụ đề + AI Nữ)
@@ -75,14 +75,8 @@
         <button id="tabBtnWeb" type="button" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-400 hover:text-white">
           🎥 Quay Trực Tiếp (Web)
         </button>
-        <button id="tabBtnPython" type="button" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-slate-400 hover:text-white">
-          🐍 Code Python (.py)
-        </button>
-        <button id="btnOpenMobileGithubGuide" type="button" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40" title="Hướng dẫn xài trên Điện Thoại & Up lên GitHub Pages để bán/chia sẻ">
-          📱 Xài Điện Thoại &amp; Up GitHub
-        </button>
-        <button id="btnDownloadStandaloneHtml" type="button" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/30" title="Tải file index.html chuẩn để up lên GitHub hoặc mở trên Điện thoại/Máy tính">
-          ⬇️ Tải Tool (.HTML)
+        <button id="btnOpenMobileGithubGuide" type="button" class="px-3 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-sky-500/20 hover:bg-sky-500/30 text-sky-300 border border-sky-500/40" title="Hướng dẫn dùng trên iPhone & Android">
+          📱 Cách Xài Trên iPhone &amp; Android
         </button>
       </div>
     </div>
@@ -536,12 +530,9 @@ Dán đoạn giới thiệu 2 (cách đoạn 1 một dòng trống) cho Video 2 
             <div>• <b>Xuất Video 1 chạm ngon lành:</b> Nút xuất video đã được tách riêng ở thanh lớn phía dưới cùng.</div>
           </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            <button id="btnRunWebBatchEdit" type="button" class="py-2.5 px-3 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-orange-300 border border-orange-500/30 transition flex items-center justify-center gap-1.5">
+          <div class="grid grid-cols-1 gap-2">
+            <button id="btnRunWebBatchEdit" type="button" class="w-full py-3 px-4 rounded-xl font-bold text-xs sm:text-sm bg-gradient-to-r from-orange-500 to-rose-600 hover:from-orange-400 hover:to-rose-500 text-white shadow transition flex items-center justify-center gap-1.5">
               <span>🎬 Xuất Tất Cả Trên Web</span>
-            </button>
-            <button id="btnDownloadPreloadedPythonEditor" type="button" class="py-2.5 px-3 rounded-xl font-bold text-xs bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-emerald-500/30 transition flex items-center justify-center gap-1.5">
-              <span>🐍 Tải File Python (.PY)</span>
             </button>
           </div>
         </div>
@@ -587,17 +578,13 @@ Dán đoạn giới thiệu 2 (cách đoạn 1 một dòng trống) cho Video 2 
         </div>
 
         <!-- Big Separate Bottom Export Buttons -->
-        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <button id="btnBottomExportSingle" type="button" class="py-4 px-5 rounded-2xl font-extrabold text-xs sm:text-sm bg-gradient-to-r from-orange-500 to-rose-600 hover:from-orange-400 hover:to-rose-500 text-white shadow-lg shadow-orange-500/25 transition flex items-center justify-center gap-2 active:scale-[0.99]">
             <span>⬇️ XUẤT VIDEO ĐANG CHỌN (XUẤT NGAY 1 VIDEO)</span>
           </button>
 
           <button id="btnBottomExportBatch" type="button" class="py-4 px-5 rounded-2xl font-extrabold text-xs sm:text-sm bg-emerald-600 hover:bg-emerald-500 text-white shadow-lg shadow-emerald-600/25 transition flex items-center justify-center gap-2 active:scale-[0.99]">
             <span>🚀 XUẤT HÀNG LOẠT TẤT CẢ VIDEO TRÊN WEB</span>
-          </button>
-
-          <button id="btnBottomExportPythonScript" type="button" class="py-4 px-5 rounded-2xl font-bold text-xs sm:text-sm bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40 transition flex items-center justify-center gap-2 active:scale-[0.99]">
-            <span>🐍 TẢI TOOL PYTHON RENDER OFFLINE (.PY)</span>
           </button>
         </div>
 
@@ -746,54 +733,58 @@ Dán đoạn giới thiệu 2 (cách đoạn 1 một dòng trống) cho Video 2 
           </div>
         </div>
 
-        <!-- NEW: MOBILE PHONE RECORDING MODE & AUTO-SPLITTER (FIXES MOBILE "KHÔNG HỖ TRỢ" 100%) -->
+        <!-- NEW: CHỐNG DỪNG KHI ĐỔI TAB (WEB WORKER CHẠY NGẦM) + HỖ TRỢ IPHONE & ANDROID 100% -->
         <div class="bg-slate-900/90 border border-sky-500/40 rounded-2xl p-5 space-y-3.5 shadow-xl">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <div>
-              <span class="text-xs font-bold uppercase tracking-wider text-sky-400">📱 Chế Độ Quay Trên Điện Thoại (Android &amp; iPhone)</span>
+              <span class="text-xs font-bold uppercase tracking-wider text-sky-400">📱 Chế Độ iPhone &amp; Android + Chạy Ngầm Khi Đổi Tab</span>
               <h3 class="text-sm font-bold text-white mt-0.5">
-                Đã khắc phục 100% lỗi "Trình duyệt điện thoại không hỗ trợ quay màn hình"!
+                Giữ quay liên tục kể cả khi đổi sang Tab khác hoặc mở App XcloudPhone!
               </h3>
             </div>
-            <span id="badgeMobileRecMode" class="px-2 py-0.5 text-[11px] font-bold rounded bg-sky-500/20 text-sky-300 border border-sky-500/40">
-              Tự động nhận diện ĐT
+            <span id="badgeMobileRecMode" class="px-2 py-0.5 text-[11px] font-bold rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+              🟢 Chống Dừng Khi Đổi Tab: BẬT
             </span>
           </div>
 
-          <p class="text-xs text-slate-300 leading-relaxed">
-            💡 <b>Tại sao bấm quay trên điện thoại hay báo không hỗ trợ?</b> Vì hệ điều hành Android &amp; iOS khóa lệnh <code>getDisplayMedia</code> của trình duyệt. Nay tool đã tích hợp <b>3 Cách Quay Trên Điện Thoại Mượt 100%</b>:
-          </p>
+          <div class="p-2.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 text-xs text-emerald-300 space-y-1">
+            <label for="chkKeepAliveBackground" class="flex items-center gap-2 font-bold cursor-pointer select-none">
+              <input id="chkKeepAliveBackground" type="checkbox" checked="" class="rounded border-slate-700 text-emerald-500 focus:ring-emerald-500 bg-slate-900">
+              <span>🔒 Khóa Chạy Ngầm (Web Worker + Audio Keep-Alive + Cửa Sổ Nổi PiP): Đổi qua Tab khác vẫn quay đủ 1p10s không bị ngắt!</span>
+            </label>
+          </div>
 
           <!-- Mode Selector for Mobile / PC -->
           <div>
-            <label for="selectRecorderSourceMode" class="block text-xs text-slate-400 mb-1">Chọn phương thức quay (Tự động chuyển sang Mobile nếu mở trên Điện thoại):</label>
+            <label for="selectRecorderSourceMode" class="block text-xs text-slate-400 mb-1">Chế độ quay cho iPhone / Android / Máy tính:</label>
             <select id="selectRecorderSourceMode" class="w-full bg-slate-950 border border-sky-500/40 rounded-xl px-3 py-2 text-xs font-bold text-sky-300 focus:outline-none focus:border-orange-500">
-              <option value="auto_smart" selected="">⚡ Tự Động Thông Minh (PC = Quay Cửa Sổ • Điện Thoại = Quay Khung Mobile 1p10s)</option>
-              <option value="mobile_canvas_stream">📱 Cách 1 (Điện Thoại): Quay Trực Tiếp Khung XcloudPhone / Video Đã Nạp (Chuẩn 1p10s)</option>
-              <option value="mobile_split_long_video">✂️ Cách 2 (Điện Thoại): Quay 1 Video Dài Bằng ĐT ➔ Tự Cắt Thành N Video 1p10s</option>
-              <option value="pc_display_media">💻 Cách 3 (Máy Tính PC/Laptop): Quay Trực Tiếp Cửa Sổ Màn Hình (getDisplayMedia)</option>
+              <option value="auto_smart" selected="">⚡ Tự Động (PC = Quay Màn Hình • iPhone/Android = Quay Ngầm Không Dừng Khi Đổi Tab)</option>
+              <option value="mobile_canvas_stream">📱 Chế Độ iPhone/Android 1: Quay Ngầm Luồng XcloudPhone 1p10s (Đổi Tab Không Dừng)</option>
+              <option value="mobile_split_long_video">✂️ Chế Độ iPhone/Android 2: Nạp Video Quay Màn Hình ĐT ➔ Tự Cắt N Video 1p10s</option>
+              <option value="pc_display_media">💻 Chế Độ Máy Tính PC: Chọn Cửa Sổ / Tab XcloudPhone Trực Tiếp</option>
             </select>
           </div>
 
-          <!-- Mobile Tool 1: Upload 1 Long Phone Screen Recording -> Auto Split into N x 1m10s Videos -->
+          <!-- Mobile Tool 1: Floating PiP Window (keeps tab alive on iOS/Android when switching tabs!) + Auto Video Splitter -->
           <div class="p-3 rounded-xl bg-slate-950 border border-slate-800 space-y-2.5">
-            <div class="text-xs font-bold text-emerald-400">
-              📲 Tiện ích cho khách xài Điện Thoại: Quay 1 lần trên ĐT ➔ Tự cắt thành nhiều Video 1p10s
+            <div class="text-xs font-bold text-amber-300">
+              📲 Bí quyết Đổi Tab Không Bao Giờ Dừng trên iPhone &amp; Android:
             </div>
-            <p class="text-[11px] text-slate-400 leading-relaxed">
-              Trên điện thoại, bạn chỉ cần bật <b>Ghi màn hình có sẵn của ĐT</b> 1 lần rồi chơi XcloudPhone Free Fire (hoặc nạp 1 video quay sẵn), bấm nút dưới đây tool sẽ <b>tự cắt chia thành đủ số lượng Video (mỗi video đúng 1p10s)</b> và đẩy thẳng qua tab Edit ghép giọng Chị Google!
+            <p class="text-[11px] text-slate-300 leading-relaxed">
+              • Khi bấm <b>"🔴 BẮT ĐẦU QUAY"</b>, tool tự động bật <b>Luồng Âm Thanh Nền + Web Worker + Cửa Sổ Nổi 01:10 (PiP)</b> để iPhone/Android không đóng băng tab khi bạn chuyển sang tab/app XcloudPhone!<br>
+              • Hoặc quay màn hình điện thoại 1 lèo rồi bấm <b>"📂 Nạp Video Quay ĐT"</b> để tự cắt thành 5–20 video 1p10s!
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+              <button id="btnStartPipFloatingTimer" type="button" class="py-2.5 px-3 rounded-xl bg-amber-500/20 hover:bg-amber-500/30 text-amber-300 border border-amber-500/40 font-bold text-xs transition flex items-center justify-center gap-1.5">
+                <span>🪟 Bật Cửa Sổ Nổi 01:10 (Đổi Tab Không Dừng)</span>
+              </button>
               <label for="inputMobileSourceVideo" class="cursor-pointer py-2.5 px-3 rounded-xl bg-sky-600 hover:bg-sky-500 text-white font-bold text-xs shadow transition flex items-center justify-center gap-1.5 text-center">
                 <span>📂 Nạp Video Quay ĐT ➔ Tự Cắt N Video 1p10s</span>
                 <input id="inputMobileSourceVideo" type="file" accept="video/*" class="hidden">
               </label>
-              <button id="btnStartPipFloatingTimer" type="button" class="py-2.5 px-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-500/40 font-bold text-xs transition flex items-center justify-center gap-1.5">
-                <span>🪟 Bật Đồng Hồ Nổi 01:10 Đè Lên ĐT</span>
-              </button>
             </div>
-            <div id="txtMobileSourceStatus" class="text-[11px] text-slate-400 mono">
-              Trạng thái: Sẵn sàng quay trên mọi điện thoại Android &amp; iPhone
+            <div id="txtMobileSourceStatus" class="text-[11px] text-emerald-400 mono">
+              Trạng thái: Đã bật Web Worker Chạy Ngầm (Đổi sang tab khác vẫn đếm &amp; quay bình thường)
             </div>
           </div>
         </div>
@@ -902,473 +893,21 @@ Dán đoạn giới thiệu 2 (cách đoạn 1 một dòng trống) cho Video 2 
       </div>
     </section>
 
-    <!-- ===================================================================== -->
-    <!-- TAB 2: PYTHON DESKTOP SCRIPTS (BOTH AUTO-EDITOR & RECORDER)           -->
-    <!-- ===================================================================== -->
-    <section id="panelPythonScript" class="hidden space-y-6">
-
-      <!-- Python Script 1: Batch Video Editor + Crop Free Fire + AI Female Voice HoaiMy -->
-      <div class="bg-slate-900/90 border border-emerald-500/40 rounded-2xl p-5 sm:p-6">
-        <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <div>
-            <span class="px-2.5 py-1 text-xs font-bold rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
-              Tool Python Cắt Khung Free Fire + Edit 20+ Video + Giọng Nữ AI Hoài My
-            </span>
-            <h2 class="text-lg font-bold text-white mt-2">
-              1. Tool Python Cắt Khung Free Fire + Ghép Phụ Đề + Giọng AI Nữ (`xcloudphone_editor_ai.py`)
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 mt-0.5">
-              Tự động cắt bỏ viền thừa màn hình để lấy đúng khung game Free Fire (dư nhẹ viền), đọc 20 đoạn kịch bản cách nhau 1 dòng trống, tạo giọng nữ AI <b>Microsoft Hoài My (`vi-VN-HoaiMyNeural`)</b> và in phụ đề vào từng video <code>.mp4</code>!
-            </p>
-          </div>
-          <div class="flex items-center gap-2">
-            <button id="btnCopyEditorPythonCode" type="button" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shadow transition">
-              📋 Copy Code Edit Video
-            </button>
-            <button id="btnDownloadEditorPythonFile" type="button" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 border border-emerald-500/30 font-bold text-xs sm:text-sm transition">
-              ⬇️ Tải xcloudphone_editor_ai.py
-            </button>
-          </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4 text-xs">
-          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-            <div class="font-bold text-emerald-400 mb-1">Bước 1: Cài thư viện (1 lần trong CMD)</div>
-            <code class="mono text-slate-200 select-all">pip install edge-tts opencv-python pillow imageio-ffmpeg</code>
-          </div>
-          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-            <div class="font-bold text-emerald-400 mb-1">Bước 2: Tự động cắt khung + Đọc kịch bản</div>
-            <div class="text-slate-300">Tự động cắt đúng tọa độ khung Free Fire đã canh sẵn và đọc kịch bản từ <code>kich_ban.txt</code>.</div>
-          </div>
-          <div class="p-3.5 rounded-xl bg-slate-950 border border-slate-800">
-            <div class="font-bold text-emerald-400 mb-1">Bước 3: Chạy &amp; Chọn 20 Video</div>
-            <code class="mono text-slate-200 select-all">python xcloudphone_editor_ai.py</code>
-          </div>
-        </div>
-
-        <pre id="pythonEditorCodeBlock" class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs mono text-slate-200 overflow-x-auto leading-relaxed max-h-[380px]">import asyncio
-import os
-import re
-import subprocess
-import tempfile
-import textwrap
-import tkinter as tk
-from tkinter import filedialog
-import cv2
-import edge_tts
-import imageio_ffmpeg
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont
-
-# ==============================================================================
-# CẤU HÌNH CẮT KHUNG FREE FIRE + GIỌNG ĐỌC AI NỮ HOÀI MY (CHUẨN TIKTOK/CAPCUT)
-# ==============================================================================
-VOICE_NAME = "vi-VN-HoaiMyNeural"  # Giọng Nữ Hoài My tự nhiên, cực hay
-OUTPUT_DIR = "Video_XcloudPhone_Da_Edit_AI"
-SCRIPT_FILE = "kich_ban.txt"
-
-# Tọa độ tự động cắt vừa khung game Free Fire (bỏ thanh Chrome &amp; Taskbar Windows):
-ENABLE_CROP_FREE_FIRE = True
-TIKTOK_VERTICAL_9_16 = True  # True = Đóng khung dọc 9:16 chuẩn TikTok không bị mất 2 bên
-CROP_X_RATIO = 0.085   # Lề trái (8.5%)
-CROP_Y_RATIO = 0.135   # Lề trên (13.5%)
-CROP_W_RATIO = 0.705   # Độ rộng khung Free Fire (70.5%)
-CROP_H_RATIO = 0.755   # Độ cao khung Free Fire (75.5%)
-
-# Kịch bản đã dán sẵn từ Web App (mỗi đoạn cách nhau 1 dòng trống = 1 video):
-EMBEDDED_SCRIPTS = """Anh em game thủ Free Fire nào đang đau đầu vì máy điện thoại nóng ran, tụt FPS liên tục khi giao tranh cuối bo hoặc hết dung lượng bộ nhớ thì nhất định phải biết đến XcloudPhone ngay hôm nay nhé! Đây là dịch vụ điện thoại đám mây Android thật một trăm phần trăm chạy trực tiếp trên hệ thống máy chủ cấu hình cực khủng, chứ không phải giả lập thông thường nên anh em leo rank Đại Kiện Tướng hoàn toàn yên tâm tuyệt đối về độ mượt cũng như độ an toàn tài khoản. Điểm ăn tiền nhất khi anh em trải nghiệm Free Fire trên XcloudPhone chính là tốc độ phản hồi siêu nhạy, ping luôn duy trì ổn định ở mức cực thấp, kéo tâm vuốt đạn chuẩn xác từng milimet mà không hề làm hao pin hay nóng chiếc điện thoại thật của mình. Đặc biệt hơn nữa, hiện tại XcloudPhone đang có chương trình tặng giờ trải nghiệm máy ảo miễn phí cực kỳ hấp dẫn dành cho cộng đồng người chơi mới. Anh em chỉ cần mở ứng dụng lên, kết nối vào chiếc điện thoại đám mây là chiến ngay Free Fire cấu hình Max Setting sáu mươi khung hình trên giây mượt như lụa bất kể đang dùng máy yếu hay máy đời cũ!
-
-Hôm nay mình sẽ hướng dẫn chi tiết cho anh em cách treo game và cày sự kiện Free Fire hai mươi bốn trên hai mươi bốn cực kỳ nhàn hạ bằng chiếc điện thoại đám mây XcloudPhone đang làm mưa làm gió trong cộng đồng game thủ Việt Nam. Bình thường nếu anh em bật máy điện thoại cá nhân liên tục nhiều giờ liền để cày nhiệm vụ hoặc săn quà sự kiện thì pin sẽ nhanh chai và máy sập nguồn rất bất tiện. Nhưng với XcloudPhone, toàn bộ quá trình xử lý đồ họa nặng nhất của Free Fire đều nằm trên đám mây tốc độ cao, nghĩa là ngay cả khi anh em tắt màn hình máy tính hay thoát ứng dụng ra ngoài thì nhân vật trong máy ảo vẫn hoạt động ổn định không hề bị văng game. Giao diện điều khiển của XcloudPhone được tối ưu hóa cực kỳ thông minh, thao tác chạm vuốt, bật keo, nhảy bắn đều mượt mà không độ trễ. Hơn thế nữa, anh em còn có cơ hội nhận ngay máy ảo miễn phí khi tham gia chia sẻ video trải nghiệm thực tế như thế này, vừa được chiến Free Fire thả ga vừa tiết kiệm chi phí nâng cấp điện thoại mới!
-
-Tại sao ngày càng nhiều cao thủ Free Fire chuyển sang sử dụng điện thoại đám mây XcloudPhone để luyện kỹ năng kéo tâm và quản lý nhiều tài khoản cùng lúc trên máy tính? Câu trả lời nằm ở sức mạnh phần cứng vượt trội mà XcloudPhone trang bị cho từng thiết bị đám mây riêng biệt. Khi anh em mở XcloudPhone trên máy tính hay điện thoại, anh em đang điều khiển một chiếc smartphone Android thực thụ với RAM lớn, chip xử lý mạnh mẽ giúp mọi pha nhảy dù xuống khu vực đông người như Tháp Đồng Hồ hay Cổng Trời trong Free Fire đều mượt mà, không bao giờ gặp tình trạng khựng hình hay giật lag. Ngoài ra, chất lượng hình ảnh truyền tải sắc nét chuẩn HD kết hợp âm thanh sống động giúp anh em nghe rõ từng tiếng bước chân của kẻ địch xung quanh. Nếu anh em muốn tự mình kiểm chứng độ mượt đỉnh cao này hoàn toàn miễn phí thì đừng chần chừ nữa, hãy đăng ký tài khoản XcloudPhone ngay hôm nay để nhận máy ảo free và tận hưởng cảm giác leo rank Free Fire đỉnh cao nhất!"""
-
-def split_into_subtitle_chunks(paragraph, max_chars=65):
-    """Tách đoạn văn ~1000 ký tự thành từng câu phụ đề ngắn gọn để hiển thị trên video."""
-    sentences = re.split(r'(?&lt;=[.!?;,])\s+', paragraph.strip())
-    chunks = []
-    current = ""
-    for sent in sentences:
-        words = sent.split()
-        for w in words:
-            if len(current) + len(w) + 1 &lt;= max_chars:
-                current = f"{current} {w}".strip()
-            else:
-                if current:
-                    chunks.append(current)
-                current = w
-        if current:
-            chunks.append(current)
-            current = ""
-    return chunks if chunks else [paragraph.strip()[:max_chars]]
-
-def get_vietnamese_font(font_size=28):
-    """Tự động lấy font hỗ trợ tiếng Việt có sẵn trên Windows/Mac/Linux."""
-    candidates = [
-        "C:/Windows/Fonts/arialbd.ttf",
-        "C:/Windows/Fonts/segoeuib.ttf",
-        "C:/Windows/Fonts/tahomabd.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
-    ]
-    for path in candidates:
-        if os.path.exists(path):
-            return ImageFont.truetype(path, font_size)
-    return ImageFont.load_default()
-
-def crop_free_fire_region(frame_bgr):
-    """Cắt lấy đúng vùng khung đang chơi Free Fire (có dư nhẹ viền) và đóng khung TikTok 9:16 nếu bật."""
-    h, w, _ = frame_bgr.shape
-    if ENABLE_CROP_FREE_FIRE:
-        x1 = max(0, int(w * CROP_X_RATIO))
-        y1 = max(0, int(h * CROP_Y_RATIO))
-        cw = min(w - x1, int(w * CROP_W_RATIO))
-        ch = min(h - y1, int(h * CROP_H_RATIO))
-        cropped = frame_bgr[y1:y1 + ch, x1:x1 + cw]
-    else:
-        cropped = frame_bgr
-
-    if TIKTOK_VERTICAL_9_16:
-        out_w, out_h = 720, 1280
-        bg = cv2.resize(cropped, (out_w, out_h))
-        bg = cv2.GaussianBlur(bg, (35, 35), 0)
-        bg = (bg.astype(np.float32) * 0.38).astype(np.uint8)
-        ch_c, cw_c, _ = cropped.shape
-        fg_w = out_w
-        fg_h = int((ch_c / max(1, cw_c)) * fg_w)
-        fg = cv2.resize(cropped, (fg_w, fg_h))
-        y_off = int((out_h - fg_h) * 0.40)
-        bg[y_off:y_off + fg_h, 0:fg_w] = fg
-        return bg
-
-    ch_f, cw_f, _ = cropped.shape
-    return cropped[:ch_f - (ch_f % 2), :cw_f - (cw_f % 2)]
-
-def draw_subtitle_on_frame(frame_bgr, subtitle_text, font):
-    """Vẽ phụ đề tiếng Việt màu vàng viền đen có hộp mờ chuẩn CapCut/TikTok."""
-    if not subtitle_text:
-        return frame_bgr
-    h, w, _ = frame_bgr.shape
-    img_pil = Image.fromarray(cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB))
-    draw = ImageDraw.Draw(img_pil, "RGBA")
-
-    wrapped_lines = textwrap.wrap(subtitle_text, width=42)[:2]
-    line_heights = []
-    line_widths = []
-    for line in wrapped_lines:
-        bbox = draw.textbbox((0, 0), line, font=font)
-        line_widths.append(bbox[2] - bbox[0])
-        line_heights.append(bbox[3] - bbox[1] + 10)
-
-    box_w = max(line_widths, default=200) + 44
-    box_h = sum(line_heights) + 24
-    box_x1 = max(14, (w - box_w) // 2)
-    box_y1 = int(h * 0.82) - (box_h // 2)
-    box_x2 = min(w - 14, box_x1 + box_w)
-    box_y2 = min(h - 14, box_y1 + box_h)
-
-    draw.rounded_rectangle(
-        [box_x1, box_y1, box_x2, box_y2],
-        radius=14,
-        fill=(10, 15, 28, 215),
-        outline=(250, 204, 21, 185),
-        width=2,
-    )
-
-    curr_y = box_y1 + 12
-    for idx, line in enumerate(wrapped_lines):
-        lw = line_widths[idx]
-        lx = (w - lw) // 2
-        for dx, dy in [(-2, -2), (2, -2), (-2, 2), (2, 2), (0, 2)]:
-            draw.text((lx + dx, curr_y + dy), line, font=font, fill=(0, 0, 0, 255))
-        draw.text((lx, curr_y), line, font=font, fill=(250, 204, 21, 255))
-        curr_y += line_heights[idx]
-
-    return cv2.cvtColor(np.array(img_pil), cv2.COLOR_RGB2BGR)
-
-async def generate_female_ai_voice(text, out_mp3_path, target_duration_sec=70.0):
-    """Tạo giọng đọc AI Nữ Hoài My và tự canh tốc độ để khớp độ dài ~1000+ ký tự."""
-    char_len = len(text.strip())
-    estimated_sec = char_len / 14.5
-    rate_str = "+0%"
-    if estimated_sec &gt; target_duration_sec * 0.95:
-        speed_pct = min(45, max(5, int(((estimated_sec / (target_duration_sec * 0.92)) - 1.0) * 100)))
-        rate_str = f"+{speed_pct}%"
-    communicate = edge_tts.Communicate(text=text.strip(), voice=VOICE_NAME, rate=rate_str)
-    await communicate.save(out_mp3_path)
-
-def process_single_video(video_path, script_text, index, total):
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    cap = cv2.VideoCapture(video_path)
-    fps = cap.get(cv2.CAP_PROP_FPS) or 30.0
-    src_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    src_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    duration_sec = total_frames / fps if fps &gt; 0 and total_frames &gt; 0 else 70.0
-
-    if TIKTOK_VERTICAL_9_16:
-        out_w, out_h = 720, 1280
-    elif ENABLE_CROP_FREE_FIRE:
-        out_w = int(src_w * CROP_W_RATIO)
-        out_h = int(src_h * CROP_H_RATIO)
-    else:
-        out_w, out_h = src_w, src_h
-    out_w = out_w - (out_w % 2)
-    out_h = out_h - (out_h % 2)
-
-    font_size = max(20, int(out_h * 0.045))
-    font = get_vietnamese_font(font_size)
-    chunks = split_into_subtitle_chunks(script_text, max_chars=65)
-    total_chars = sum(len(c) for c in chunks) or 1
-
-    cue_timings = []
-    acc_time = 0.0
-    for c in chunks:
-        c_dur = (len(c) / total_chars) * duration_sec
-        cue_timings.append((acc_time, acc_time + c_dur, c))
-        acc_time += c_dur
-
-    print(f"\n🎙️ [{index}/{total}] Đang tạo giọng AI Nữ ({VOICE_NAME}) cho đoạn #{index} ({len(script_text)} ký tự)...")
-    temp_dir = tempfile.mkdtemp()
-    tts_mp3 = os.path.join(temp_dir, f"voice_{index}.mp3")
-    temp_silent_mp4 = os.path.join(temp_dir, f"sub_video_{index}.mp4")
-
-    asyncio.run(generate_female_ai_voice(script_text, tts_mp3, duration_sec))
-
-    print(f"✂️ [{index}/{total}] Đang cắt khung Free Fire ({out_w}x{out_h}) &amp; chèn phụ đề: {os.path.basename(video_path)}...")
-    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-    writer = cv2.VideoWriter(temp_silent_mp4, fourcc, fps, (out_w, out_h))
-
-    frame_idx = 0
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            break
-        cropped = crop_free_fire_region(frame)
-        if cropped.shape[1] != out_w or cropped.shape[0] != out_h:
-            cropped = cv2.resize(cropped, (out_w, out_h))
-
-        curr_sec = frame_idx / fps
-        active_sub = chunks[-1]
-        for st, et, txt in cue_timings:
-            if st &lt;= curr_sec &lt;= et:
-                active_sub = txt
-                break
-        frame_sub = draw_subtitle_on_frame(cropped, active_sub, font)
-        writer.write(frame_sub)
-        frame_idx += 1
-        if frame_idx % 30 == 0 or frame_idx == total_frames:
-            pct = min(100, int((frame_idx / max(1, total_frames)) * 100))
-            print(f"\r   ⏳ Đang cắt khung &amp; vẽ phụ đề: {pct}% ({frame_idx}/{total_frames} frames)", end="", flush=True)
-
-    cap.release()
-    writer.release()
-
-    out_filename = os.path.join(OUTPUT_DIR, f"XcloudPhone_FreeFire_Edited_{index:02d}.mp4")
-    ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
-    cmd = [
-        ffmpeg_exe, "-y",
-        "-i", temp_silent_mp4,
-        "-i", tts_mp3,
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "22",
-        "-c:a", "aac", "-b:a", "192k",
-        "-map", "0:v:0", "-map", "1:a:0",
-        "-shortest",
-        out_filename
-    ]
-    subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    print(f"\n✅ [XONG VIDEO {index}/{total}] Đã xuất: {out_filename}")
-
-def main():
-    print("=" * 70)
-    print("  TOOL CẮT KHUNG FREE FIRE + EDIT 20 VIDEO + PHỤ ĐỀ + GIỌNG NỮ HOÀI MY")
-    print("=" * 70)
-
-    if not os.path.exists(SCRIPT_FILE):
-        with open(SCRIPT_FILE, "w", encoding="utf-8") as f:
-            f.write(EMBEDDED_SCRIPTS.strip() + "\n")
-        print(f"📝 Đã tạo sẵn file '{SCRIPT_FILE}' chứa các đoạn kịch bản của mày.")
-
-    with open(SCRIPT_FILE, "r", encoding="utf-8") as f:
-        raw_text = f.read()
-
-    paragraphs = [p.strip() for p in re.split(r"\n\s*\n", raw_text) if p.strip()]
-    print(f"✅ Đã đọc được {len(paragraphs)} đoạn kịch bản từ '{SCRIPT_FILE}'.")
-
-    print("📂 Đang mở cửa sổ chọn video... Hãy bôi đen chọn các video cần edit (1 - 20+ video)!")
-    root = tk.Tk()
-    root.withdraw()
-    root.attributes("-topmost", True)
-    video_files = list(filedialog.askopenfilenames(
-        title="Chọn các video cần cắt khung Free Fire + ghép Phụ đề &amp; Giọng AI Nữ",
-        filetypes=[("Video files", "*.mp4 *.webm *.mkv *.mov *.avi"), ("All files", "*.*")]
-    ))
-
-    if not video_files:
-        print("❌ Mày chưa chọn video nào!")
-        return
-
-    count = min(len(video_files), len(paragraphs))
-    print(f"\n🚀 Bắt đầu cắt khung Free Fire &amp; ghép AI Nữ cho {count} video...")
-
-    for i in range(count):
-        process_single_video(video_files[i], paragraphs[i], i + 1, count)
-
-    print("\n" + "=" * 70)
-    print(f"🎉 HOÀN TẤT {count} VIDEO! Mở thư mục sau để lấy video:")
-    print(f"📂 {os.path.abspath(OUTPUT_DIR)}")
-    print("=" * 70)
-
-if __name__ == "__main__":
-    main()
-</pre>
-      </div>
-
-      <!-- Python Script 2: Auto Screen Recorder 1m10s -->
-      <div class="bg-slate-900/90 border border-slate-800 rounded-2xl p-5 sm:p-6">
-        <div class="flex flex-wrap items-center justify-between gap-4 mb-4">
-          <div>
-            <span class="px-2.5 py-1 text-xs font-bold rounded-full bg-orange-500/15 text-orange-400 border border-orange-500/30">
-              Tool Python Quay Màn Hình 1 Phút 10 Giây (Có Tùy Chọn Cắt Khung Ngay Lúc Quay)
-            </span>
-            <h2 class="text-lg font-bold text-white mt-2">
-              2. Tool Python Quay Màn Hình Tự Động (`xcloudphone_recorder.py`)
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 mt-0.5">
-              Hỏi số lượng video muốn quay (VD: 5, 10, 20), tự động cắt đúng vùng khung Free Fire (hoặc full màn hình) và quay đúng 70 giây (1 phút 10 giây) mỗi video rồi ngắt:
-            </p>
-          </div>
-          <div class="flex items-center gap-2">
-            <button id="btnCopyPythonCode" type="button" class="px-4 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-white font-bold text-xs sm:text-sm shadow transition">
-              📋 Copy Code Python
-            </button>
-            <button id="btnDownloadPythonFile" type="button" class="px-4 py-2.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-orange-400 border border-orange-500/30 font-bold text-xs sm:text-sm transition">
-              ⬇️ Tải file .py
-            </button>
-          </div>
-        </div>
-
-        <pre id="pythonCodeBlock" class="bg-slate-950 border border-slate-800 rounded-xl p-4 text-xs mono text-slate-200 overflow-x-auto leading-relaxed max-h-[320px]">import os
-import time
-from datetime import datetime
-import cv2
-import numpy as np
-import mss
-
-DURATION_SECONDS = 70  # Đúng 1 phút 10 giây (70s)
-FPS = 30
-OUTPUT_DIR = "Video_XcloudPhone_FreeFire"
-
-# Tọa độ cắt vừa khung đang chơi Free Fire (có dư nhẹ viền XcloudPhone):
-CROP_ENABLED = True
-CROP_X_RATIO = 0.085
-CROP_Y_RATIO = 0.135
-CROP_W_RATIO = 0.705
-CROP_H_RATIO = 0.755
-
-def main():
-    print("=" * 64)
-    print("  TOOL QUAY XCLOUDPHONE FREE FIRE - ĐÚNG 1 PHÚT 10 GIÂY + CẮT KHUNG")
-    print("=" * 64)
-    print("Lưu ý: Hãy mở sẵn màn hình XcloudPhone &amp; điện thoại Free Fire!")
-    print()
-
-    while True:
-        raw = input("👉 Mày muốn quay bao nhiêu video? (VD: 5, 10): ").strip()
-        if raw.isdigit() and int(raw) &gt; 0:
-            total_videos = int(raw)
-            break
-        print("❌ Vui lòng nhập một số nguyên lớn hơn 0 (ví dụ: 5 hoặc 10)!")
-
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    print(f"\n✅ Đã nhận lệnh: Quay {total_videos} video (Mỗi video đúng 1 phút 10 giây = 70s).")
-    print("⏳ Đếm ngược 3 giây để mày chuyển sang màn hình XcloudPhone...")
-    for c in range(3, 0, -1):
-        print(f"   Bắt đầu sau {c} giây...")
-        time.sleep(1)
-
-    with mss.mss() as sct:
-        mon = sct.monitors[1]
-        if CROP_ENABLED:
-            capture_region = {
-                "left": mon["left"] + int(mon["width"] * CROP_X_RATIO),
-                "top": mon["top"] + int(mon["height"] * CROP_Y_RATIO),
-                "width": int(mon["width"] * CROP_W_RATIO),
-                "height": int(mon["height"] * CROP_H_RATIO),
-            }
-        else:
-            capture_region = mon
-
-        width = capture_region["width"] - (capture_region["width"] % 2)
-        height = capture_region["height"] - (capture_region["height"] % 2)
-
-        for idx in range(1, total_videos + 1):
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            filename = os.path.join(
-                OUTPUT_DIR,
-                f"XcloudPhone_FreeFire_Video_{idx:02d}_{timestamp}_1m10s.mp4"
-            )
-            fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-            out = cv2.VideoWriter(filename, fourcc, FPS, (width, height))
-
-            print(f"\n🔴 [Video {idx}/{total_videos}] Đang quay khung Free Fire: {filename}")
-            total_frames = DURATION_SECONDS * FPS
-            start_time = time.perf_counter()
-
-            for frame_idx in range(total_frames):
-                target_time = start_time + (frame_idx / FPS)
-                img = np.array(sct.grab(capture_region))
-                frame = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
-                frame = frame[:height, :width]
-                out.write(frame)
-
-                elapsed = time.perf_counter() - start_time
-                remaining = max(0.0, DURATION_SECONDS - elapsed)
-                mins = int(remaining) // 60
-                secs = int(remaining) % 60
-                print(
-                    f"\r   ⏱️ Thời gian còn lại: {mins:02d}:{secs:02d} "
-                    f"(Đã quay {min(DURATION_SECONDS, int(elapsed))}s / {DURATION_SECONDS}s)",
-                    end="",
-                    flush=True,
-                )
-
-                sleep_time = target_time + (1.0 / FPS) - time.perf_counter()
-                if sleep_time &gt; 0:
-                    time.sleep(sleep_time)
-
-            out.release()
-            print(f"\n✅ [Hoàn tất {idx}/{total_videos}] Đã lưu đúng 1 phút 10 giây: {filename}")
-
-            if idx &lt; total_videos:
-                time.sleep(1)
-
-    print("\n" + "=" * 64)
-    print(f"🎉 XONG! Đã quay đủ {total_videos} video (1 phút 10 giây/video)!")
-    print(f"📂 Thư mục chứa video: {os.path.abspath(OUTPUT_DIR)}")
-    print("=" * 64)
-
-if __name__ == "__main__":
-    main()
-</pre>
-      </div>
-
-    </section>
-
-
-    <!-- Hidden video for Mobile Source & Floating PiP Countdown Timer -->
+    <!-- Hidden video & audio for Mobile Background Keep-Alive & Floating PiP Countdown Timer -->
     <video id="hiddenMobileSourceVideo" style="position:fixed;left:0;bottom:0;width:2px;height:2px;opacity:0.01;pointer-events:none;z-index:-1;" playsinline="" webkit-playsinline="" muted="" loop=""></video>
     <canvas id="pipTimerCanvas" width="480" height="270" class="hidden"></canvas>
     <video id="pipTimerVideo" style="position:fixed;left:0;bottom:0;width:2px;height:2px;opacity:0.01;pointer-events:none;z-index:-1;" playsinline="" webkit-playsinline="" muted="" autoplay=""></video>
+    <audio id="bgKeepAliveAudio" style="display:none;" playsinline="" loop=""></audio>
 
-    <!-- MODAL: HƯỚNG DẪN XÀI TRÊN ĐIỆN THOẠI & UP LÊN GITHUB PAGES ĐỂ BÁN/CHIA SẺ -->
+    <!-- MODAL: HƯỚNG DẪN DÙNG TRÊN IPHONE & ANDROID (ĐÃ BỎ HẾT NÚT TẢI CODE ĐỂ BẢO MẬT) -->
     <div id="modalMobileGithubGuide" class="fixed inset-0 z-50 hidden bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
       <div class="bg-slate-900 border border-sky-500/40 rounded-2xl max-w-2xl w-full p-5 sm:p-6 shadow-2xl space-y-4 my-8">
         <div class="flex items-center justify-between border-b border-slate-800 pb-3">
           <div class="flex items-center gap-2.5">
-            <span class="text-2xl">📱🚀</span>
+            <span class="text-2xl">📱🔥</span>
             <div>
-              <h3 class="text-base sm:text-lg font-extrabold text-white">Hướng Dẫn Xài Trên Điện Thoại &amp; Up Lên GitHub Để Bán</h3>
-              <p class="text-xs text-sky-400">Chạy mượt 100% trên Android (Chrome) &amp; iPhone (Safari) — Không còn lỗi quay màn hình!</p>
+              <h3 class="text-base sm:text-lg font-extrabold text-white">Hướng Dẫn Quay &amp; Edit Trên iPhone (iOS) và Android</h3>
+              <p class="text-xs text-sky-400">Hỗ trợ Chạy Ngầm Khi Đổi Tab + Tự Cắt Khung Free Fire + Giọng Chị Google</p>
             </div>
           </div>
           <button id="btnCloseMobileGithubModal" type="button" class="w-8 h-8 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-sm">✕</button>
@@ -1376,32 +915,27 @@ if __name__ == "__main__":
 
         <div class="space-y-3 text-xs sm:text-sm text-slate-200 leading-relaxed max-h-[70vh] overflow-y-auto pr-1">
           <div class="p-3.5 rounded-xl bg-emerald-500/15 border border-emerald-500/30 space-y-1.5">
-            <div class="font-bold text-emerald-400">✅ 1. Cách khách hàng xài trên Điện Thoại (Android &amp; iPhone):</div>
-            <div>• <b>Khi bấm nút "🔴 BẮT ĐẦU QUAY" trên Điện Thoại:</b> Tool tự động nhận diện trình duyệt điện thoại và chuyển sang <b>Bộ Quay Mobile Canvas 1p10s</b> (không gọi lệnh <code>getDisplayMedia</code> của máy tính nữa nên <b>không bao giờ bị báo lỗi không hỗ trợ</b>!).</div>
-            <div>• <b>Cách quay thực tế trên ĐT cực nhanh:</b> Khách có thể bật <b>🪟 Đồng Hồ Nổi 01:10</b> đè lên màn hình XcloudPhone để canh giờ quay bằng trình ghi màn hình điện thoại, HOẶC quay 1 video dài trên điện thoại rồi bấm <b>📂 Nạp Video Quay ĐT ➔ Tự Cắt N Video 1p10s</b> để tool tự cắt ra 5-20 video đúng 1p10s và ghép Giọng Chị Google + Phụ đề luôn!</div>
-            <div>• <b>Lưu về Thư Viện Ảnh ĐT:</b> Danh sách video xuất ra có thêm nút <b>📲 Lưu Về ĐT / Chia Sẻ</b> giúp iPhone &amp; Android lưu thẳng video <code>.MP4</code> vào Album Ảnh hoặc đăng thẳng lên TikTok!</div>
+            <div class="font-bold text-emerald-400">✅ 1. Quay Ngầm Khi Đổi Sang Tab Khác (Không Bao Giờ Bị Ngắt):</div>
+            <div>• Khi bạn bấm <b>"🔴 BẮT ĐẦU QUAY MÀN HÌNH XCLOUDPHONE"</b>, tool tự động kích hoạt <b>Web Worker Chạy Ngầm + Luồng Âm Thanh Giữ Thức (Keep-Alive) + Cửa Sổ Nổi 01:10 (PiP)</b>.</div>
+            <div>• Nhờ vậy, khi bạn <b>đổi sang tab XcloudPhone khác</b> hoặc ẩn trình duyệt xuống trên iPhone/Android hay Máy tính, đồng hồ đếm ngược <code>01:10</code> và bộ ghi hình <b>vẫn chạy 100% không bị dừng</b>!</div>
           </div>
 
           <div class="p-3.5 rounded-xl bg-sky-500/15 border border-sky-500/30 space-y-1.5">
-            <div class="font-bold text-sky-400">🌐 2. Cách Up Lên GitHub Pages Lấy Link Web Cho Khách Xài (Chỉ mất 1 phút):</div>
-            <div><b>Bước 1:</b> Bấm nút <b>"⬇️ Tải Tool (.HTML)"</b> ở góc trên cùng bên phải tool này (file tải về đã được đặt tên chuẩn là <code>index.html</code>).</div>
-            <div><b>Bước 2:</b> Vào <a href="https://github.com/new" target="_blank" rel="noopener noreferrer" class="text-orange-400 underline font-bold">github.com/new</a> tạo 1 Repository mới (đặt tên ví dụ: <code>xcloudphone-tool</code>, chọn <b>Public</b>).</div>
-            <div><b>Bước 3:</b> Bấm <b>uploading an existing file</b> ➔ Chọn file <code>index.html</code> vừa tải ➔ Bấm <b>Commit changes</b>.</div>
-            <div><b>Bước 4:</b> Vào mục <b>Settings</b> ➔ <b>Pages</b> (cột bên trái) ➔ Chỗ Branch chọn <b>main</b> rồi bấm <b>Save</b>. Đợi 30 giây là mày có ngay đường link web <code>https://ten-github.github.io/xcloudphone-tool/</code> gửi cho khách mở trên Điện Thoại hay Máy Tính đều chạy mượt 100%!</div>
+            <div class="font-bold text-sky-400">⚡ 2. Cách Quay &amp; Cắt Hàng Loạt 1p10s Nhanh Nhất Trên iPhone / Android:</div>
+            <div>• <b>Bước 1:</b> Qua tab <b>🎥 Quay Trực Tiếp (Web)</b>, bấm <b>"🪟 Bật Cửa Sổ Nổi 01:10"</b> và bấm <b>"🔴 BẮT ĐẦU QUAY"</b> để đồng hồ nổi đè lên màn hình điện thoại khi bạn chơi XcloudPhone Free Fire.</div>
+            <div>• <b>Bước 2:</b> Bạn cũng có thể nạp video quay màn hình điện thoại vào nút <b>"📂 Nạp Video Quay ĐT ➔ Tự Cắt N Video 1p10s"</b> — tool sẽ tự động cắt chia thành từng <b>Video 1, Video 2, Video 3... (mỗi video đúng 1p10s)</b> và chuyển thẳng qua bảng Edit!</div>
+            <div>• <b>Bước 3:</b> Qua bảng <b>✨ Edit Hàng Loạt</b>, chọn nút <b>"📱 Khung Quay Từ Điện Thoại"</b> ➔ Bấm <b>Xuất Video</b> ở dưới cùng ➔ Bấm <b>"📲 Lưu Về ĐT / Share"</b> để lưu thẳng file <code>.MP4</code> có tiếng Chị Google vào Album Ảnh iPhone/Android!</div>
           </div>
 
           <div class="p-3.5 rounded-xl bg-amber-500/15 border border-amber-500/30 space-y-1.5">
-            <div class="font-bold text-amber-300">📲 3. Mẹo Cài Thành App Ngoài Màn Hình Chính Điện Thoại (Khi bán cho khách):</div>
-            <div>• <b>Trên iPhone (Safari):</b> Mở link web ➔ Bấm nút <b>Chia sẻ (Share)</b> ở dưới ➔ Chọn <b>"Thêm vào MH chính" (Add to Home Screen)</b>.</div>
-            <div>• <b>Trên Android (Chrome):</b> Mở link web ➔ Bấm dấu <b>3 chấm (⋮)</b> góc trên ➔ Chọn <b>"Thêm vào màn hình chính / Cài đặt ứng dụng"</b>. Nó sẽ hiện icon App <b>XcloudPhone Studio</b> full màn hình y hệt ứng dụng thật!</div>
+            <div class="font-bold text-amber-300">📲 3. Thêm Tool Ra Màn Hình Chính Điện Thoại Như App Thật:</div>
+            <div>• <b>Trên iPhone (Safari):</b> Bấm nút <b>Chia sẻ (Share)</b> ở dưới ➔ Chọn <b>"Thêm vào MH chính" (Add to Home Screen)</b>.</div>
+            <div>• <b>Trên Android (Chrome):</b> Bấm dấu <b>3 chấm (⋮)</b> góc trên ➔ Chọn <b>"Thêm vào màn hình chính / Cài đặt ứng dụng"</b>.</div>
           </div>
         </div>
 
         <div class="flex items-center justify-end gap-2 pt-2 border-t border-slate-800">
-          <button id="btnModalDownloadIndexHtml" type="button" class="px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm transition">
-            ⬇️ Tải Ngay file index.html Chuẩn GitHub
-          </button>
-          <button id="btnCloseMobileGithubModalBottom" type="button" class="px-4 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-xs sm:text-sm transition">
+          <button id="btnCloseMobileGithubModalBottom" type="button" class="px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-white font-bold text-xs sm:text-sm transition">
             Đã hiểu, Đóng lại
           </button>
         </div>
@@ -1481,13 +1015,10 @@ if __name__ == "__main__":
       // Header Tabs
       tabBtnEditor: document.getElementById('tabBtnEditor'),
       tabBtnWeb: document.getElementById('tabBtnWeb'),
-      tabBtnPython: document.getElementById('tabBtnPython'),
-      btnDownloadStandaloneHtml: document.getElementById('btnDownloadStandaloneHtml'),
 
       // Panels
       panelBatchEditor: document.getElementById('panelBatchEditor'),
       panelWebRecorder: document.getElementById('panelWebRecorder'),
-      panelPythonScript: document.getElementById('panelPythonScript'),
 
       // Batch Editor Controls
       badgeEditorVideoCount: document.getElementById('badgeEditorVideoCount'),
@@ -1557,12 +1088,10 @@ if __name__ == "__main__":
       txtEditorBatchPct: document.getElementById('txtEditorBatchPct'),
       barEditorBatchProgress: document.getElementById('barEditorBatchProgress'),
       btnRunWebBatchEdit: document.getElementById('btnRunWebBatchEdit'),
-      btnDownloadPreloadedPythonEditor: document.getElementById('btnDownloadPreloadedPythonEditor'),
       selectExportDurationMode: document.getElementById('selectExportDurationMode'),
       selectPlaybackRateFix: document.getElementById('selectPlaybackRateFix'),
       btnBottomExportSingle: document.getElementById('btnBottomExportSingle'),
       btnBottomExportBatch: document.getElementById('btnBottomExportBatch'),
-      btnBottomExportPythonScript: document.getElementById('btnBottomExportPythonScript'),
       txtEditedOutputCount: document.getElementById('txtEditedOutputCount'),
       btnStopWebBatchEdit: document.getElementById('btnStopWebBatchEdit'),
       editedVideosOutputList: document.getElementById('editedVideosOutputList'),
@@ -1598,13 +1127,9 @@ if __name__ == "__main__":
       btnSendAllToEditorNow: document.getElementById('btnSendAllToEditorNow'),
       btnClearRecordings: document.getElementById('btnClearRecordings'),
 
-      // Python Code Blocks & Buttons
-      pythonEditorCodeBlock: document.getElementById('pythonEditorCodeBlock'),
-      btnCopyEditorPythonCode: document.getElementById('btnCopyEditorPythonCode'),
-      btnDownloadEditorPythonFile: document.getElementById('btnDownloadEditorPythonFile'),
-      pythonCodeBlock: document.getElementById('pythonCodeBlock'),
-      btnCopyPythonCode: document.getElementById('btnCopyPythonCode'),
-      btnDownloadPythonFile: document.getElementById('btnDownloadPythonFile'),
+      // Background Keep-Alive Elements
+      chkKeepAliveBackground: document.getElementById('chkKeepAliveBackground'),
+      bgKeepAliveAudio: document.getElementById('bgKeepAliveAudio'),
 
       // Mobile & GitHub Guide Elements
       badgeDeviceType: document.getElementById('badgeDeviceType'),
@@ -1612,7 +1137,6 @@ if __name__ == "__main__":
       modalMobileGithubGuide: document.getElementById('modalMobileGithubGuide'),
       btnCloseMobileGithubModal: document.getElementById('btnCloseMobileGithubModal'),
       btnCloseMobileGithubModalBottom: document.getElementById('btnCloseMobileGithubModalBottom'),
-      btnModalDownloadIndexHtml: document.getElementById('btnModalDownloadIndexHtml'),
       badgeMobileRecMode: document.getElementById('badgeMobileRecMode'),
       selectRecorderSourceMode: document.getElementById('selectRecorderSourceMode'),
       inputMobileSourceVideo: document.getElementById('inputMobileSourceVideo'),
@@ -1655,476 +1179,171 @@ if __name__ == "__main__":
     }
 
     // =========================================================================
-    // PYTHON SCRIPTS (FIXED H264 MP4 + VIETNAMESE VOICE + REALTIME)
+    // BACKGROUND WEB WORKER TIMER + AUDIO KEEP-ALIVE + WAKELOCK ENGINE
+    // (Prevents iOS Safari, Android Chrome & Desktop browsers from stopping
+    //  or throttling recording/rendering when the user switches to another tab!)
     // =========================================================================
-    function buildPythonRecorderScript() {
-      const cx = (state.cropX / 100).toFixed(3);
-      const cy = (state.cropY / 100).toFixed(3);
-      const cw = (state.cropW / 100).toFixed(3);
-      const ch = (state.cropH / 100).toFixed(3);
-      return `import os
-import subprocess
-import time
-from datetime import datetime
-import cv2
-import numpy as np
-import mss
+    const bgWorkerTimer = (() => {
+      const callbacks = new Map();
+      let nextId = 1;
+      let worker = null;
 
-DURATION_SECONDS = 70  # Đúng 1 phút 10 giây (70s)
-FPS = 30
-OUTPUT_DIR = "Video_XcloudPhone_FreeFire"
-
-# Tọa độ cắt vừa khung đang chơi Free Fire (có dư nhẹ viền XcloudPhone):
-CROP_ENABLED = True
-CROP_X_RATIO = ${cx}
-CROP_Y_RATIO = ${cy}
-CROP_W_RATIO = ${cw}
-CROP_H_RATIO = ${ch}
-
-def convert_to_h264_for_chrome(raw_mp4, final_mp4):
-    """Chuyển sang chuẩn MP4 H.264 (avc1) để điện thoại, TikTok, Facebook và Chrome đều mở được 100%."""
-    try:
-        import imageio_ffmpeg
-        ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
-        cmd = [
-            ffmpeg_exe, "-y", "-i", raw_mp4,
-            "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-pix_fmt", "yuv420p",
-            final_mp4
-        ]
-        res = subprocess.run(cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        if res.returncode == 0 and os.path.exists(final_mp4):
-            os.remove(raw_mp4)
-            return final_mp4
-    except Exception:
-        pass
-    os.replace(raw_mp4, final_mp4)
-    return final_mp4
-
-def main():
-    print("=" * 68)
-    print("  TOOL QUAY XCLOUDPHONE FREE FIRE - CHUẨN MP4 H.264 REALTIME 1.0x")
-    print("=" * 68)
-    print("Lưu ý: Hãy mở sẵn màn hình XcloudPhone & điện thoại Free Fire!")
-    print()
-
-    while True:
-        raw = input("👉 Mày muốn quay bao nhiêu video? (VD: 5, 10): ").strip()
-        if raw.isdigit() and int(raw) > 0:
-            total_videos = int(raw)
-            break
-        print("❌ Vui lòng nhập một số nguyên lớn hơn 0 (ví dụ: 5 hoặc 10)!")
-
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    print(f"\\n✅ Đã nhận lệnh: Quay {total_videos} video (Đúng {DURATION_SECONDS} giây thực tế / video).")
-    print("⏳ Đếm ngược 3 giây để mày chuyển sang màn hình XcloudPhone...")
-    for c in range(3, 0, -1):
-        print(f"   Bắt đầu sau {c} giây...")
-        time.sleep(1)
-
-    with mss.mss() as sct:
-        mon = sct.monitors[1]
-        if CROP_ENABLED:
-            capture_region = {
-                "left": mon["left"] + int(mon["width"] * CROP_X_RATIO),
-                "top": mon["top"] + int(mon["height"] * CROP_Y_RATIO),
-                "width": int(mon["width"] * CROP_W_RATIO),
-                "height": int(mon["height"] * CROP_H_RATIO),
+      try {
+        const workerCode = `
+          const timers = new Map();
+          self.onmessage = function(e) {
+            const { cmd, id, ms } = e.data || {};
+            if (cmd === 'start') {
+              if (timers.has(id)) clearInterval(timers.get(id));
+              const t = setInterval(() => self.postMessage({ id }), ms || 33);
+              timers.set(id, t);
+            } else if (cmd === 'stop') {
+              if (timers.has(id)) {
+                clearInterval(timers.get(id));
+                timers.delete(id);
+              }
             }
-        else:
-            capture_region = mon
+          };
+        `;
+        const blob = new Blob([workerCode], { type: 'application/javascript' });
+        worker = new Worker(URL.createObjectURL(blob));
+        worker.onmessage = (e) => {
+          const id = e.data && e.data.id;
+          const cb = callbacks.get(id);
+          if (cb) {
+            try { cb(); } catch (err) {}
+          }
+        };
+      } catch (err) {
+        worker = null;
+      }
 
-        width = capture_region["width"] - (capture_region["width"] % 2)
-        height = capture_region["height"] - (capture_region["height"] % 2)
+      return {
+        setInterval(fn, ms) {
+          const id = nextId++;
+          if (worker) {
+            callbacks.set(id, fn);
+            worker.postMessage({ cmd: 'start', id, ms });
+            return { isWorker: true, id };
+          }
+          const nativeId = window.setInterval(fn, ms);
+          return { isWorker: false, id: nativeId };
+        },
+        clearInterval(handle) {
+          if (!handle) return;
+          if (handle.isWorker && worker) {
+            callbacks.delete(handle.id);
+            worker.postMessage({ cmd: 'stop', id: handle.id });
+          } else {
+            window.clearInterval(handle.id || handle);
+          }
+        }
+      };
+    })();
 
-        for idx in range(1, total_videos + 1):
-            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-            raw_filename = os.path.join(OUTPUT_DIR, f"_raw_{idx:02d}_{timestamp}.mp4")
-            final_filename = os.path.join(
-                OUTPUT_DIR,
-                f"Video_{idx}_{timestamp}_1m10s.mp4"
-            )
-            fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-            out = cv2.VideoWriter(raw_filename, fourcc, FPS, (width, height))
+    let wakeLockSentinel = null;
+    let keepAliveWavUrl = null;
 
-            print(f"\\n🔴 [Video {idx}/{total_videos}] Đang quay chuẩn 1.0x (Không bị x2): {final_filename}")
-            total_target_frames = int(DURATION_SECONDS * FPS)
-            written_frames = 0
-            start_time = time.perf_counter()
-
-            while True:
-                elapsed = time.perf_counter() - start_time
-                if elapsed >= DURATION_SECONDS:
-                    break
-
-                img = np.array(sct.grab(capture_region))
-                frame = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR)
-                frame = frame[:height, :width]
-
-                expected_frames = min(total_target_frames, int(elapsed * FPS) + 1)
-                while written_frames < expected_frames:
-                    out.write(frame)
-                    written_frames += 1
-
-                remaining = max(0.0, DURATION_SECONDS - elapsed)
-                mins = int(remaining) // 60
-                secs = int(remaining) % 60
-                print(
-                    f"\\r   ⏱️ Còn lại: {mins:02d}:{secs:02d} "
-                    f"(Đã quay {int(elapsed)}s / {DURATION_SECONDS}s | Frame: {written_frames}/{total_target_frames})",
-                    end="",
-                    flush=True,
-                )
-
-                next_frame_time = start_time + (written_frames / FPS)
-                sleep_dur = next_frame_time - time.perf_counter()
-                if sleep_dur > 0:
-                    time.sleep(sleep_dur)
-
-            while written_frames < total_target_frames:
-                out.write(frame)
-                written_frames += 1
-
-            out.release()
-            convert_to_h264_for_chrome(raw_filename, final_filename)
-            print(f"\\n✅ [Hoàn tất Video {idx}/{total_videos}] Đã lưu chuẩn MP4 H.264: {final_filename}")
-
-            if idx < total_videos:
-                time.sleep(1)
-
-    print("\\n" + "=" * 68)
-    print(f"🎉 XONG! Đã quay đủ {total_videos} video (Chuẩn MP4 H.264)!")
-    print(f"📂 Thư mục chứa video: {os.path.abspath(OUTPUT_DIR)}")
-    print("=" * 68)
-
-if __name__ == "__main__":
-    main()
-`;
+    function createSilentKeepAliveWavBlobUrl() {
+      if (keepAliveWavUrl) return keepAliveWavUrl;
+      const sampleRate = 8000;
+      const numSamples = sampleRate * 2; // 2 seconds loop
+      const buffer = new ArrayBuffer(44 + numSamples * 2);
+      const view = new DataView(buffer);
+      const writeStr = (offset, str) => {
+        for (let i = 0; i < str.length; i++) view.setUint8(offset + i, str.charCodeAt(i));
+      };
+      writeStr(0, 'RIFF');
+      view.setUint32(4, 36 + numSamples * 2, true);
+      writeStr(8, 'WAVE');
+      writeStr(12, 'fmt ');
+      view.setUint32(16, 16, true);
+      view.setUint16(20, 1, true);
+      view.setUint16(22, 1, true);
+      view.setUint32(24, sampleRate, true);
+      view.setUint32(28, sampleRate * 2, true);
+      view.setUint16(32, 2, true);
+      view.setUint16(34, 16, true);
+      writeStr(36, 'data');
+      view.setUint32(40, numSamples * 2, true);
+      for (let i = 0; i < numSamples; i++) {
+        view.setInt16(44 + i * 2, (i % 2 === 0) ? 1 : -1, true);
+      }
+      const blob = new Blob([buffer], { type: 'audio/wav' });
+      keepAliveWavUrl = URL.createObjectURL(blob);
+      return keepAliveWavUrl;
     }
 
-    function buildPythonEditorScript(embeddedScriptsText) {
-      const safeTripleQuoted = (embeddedScriptsText || SAMPLE_THREE_SCRIPTS).replace(/"""/g, "'''");
-      const cx = (state.cropX / 100).toFixed(3);
-      const cy = (state.cropY / 100).toFixed(3);
-      const cw = (state.cropW / 100).toFixed(3);
-      const ch = (state.cropH / 100).toFixed(3);
-      const cropFlag = state.enableCrop ? "True" : "False";
-      const tiktokFlag = state.aspectMode === "tiktok_9_16" ? "True" : "False";
-      const slowDownFactor = el.selectPlaybackRateFix ? (parseFloat(el.selectPlaybackRateFix.value) || 1.0) : 1.0;
-      const selectedVoiceKey = el.selectAiFemaleVoice ? el.selectAiFemaleVoice.value : "gg_chi_google_chuan";
-      const pyVoiceName = selectedVoiceKey === "namminh" ? "vi-VN-NamMinhNeural" : "vi-VN-HoaiMyNeural";
+    async function startBackgroundKeepAlive() {
+      try {
+        if (el.chkKeepAliveBackground && !el.chkKeepAliveBackground.checked) return;
 
-      return `import asyncio
-import os
-import re
-import subprocess
-import tempfile
-import textwrap
-import tkinter as tk
-from tkinter import filedialog
-import cv2
-import edge_tts
-import imageio_ffmpeg
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont
+        // 1. Play constant ultra-quiet WAV loop in <audio> so iOS Safari & Android Chrome never suspend this tab when switching tabs!
+        if (el.bgKeepAliveAudio) {
+          el.bgKeepAliveAudio.src = createSilentKeepAliveWavBlobUrl();
+          el.bgKeepAliveAudio.volume = 0.02;
+          el.bgKeepAliveAudio.loop = true;
+          await el.bgKeepAliveAudio.play().catch(() => {});
+        }
 
-# ==============================================================================
-# CẤU HÌNH CẮT KHUNG FREE FIRE + GIỌNG ĐỌC TIẾNG VIỆT CÓ DẤU + XUẤT MP4 TIKTOK
-# ==============================================================================
-VOICE_NAME = "${pyVoiceName}"  # "vi-VN-HoaiMyNeural" (Nữ) hoặc "vi-VN-NamMinhNeural" (Nam)
-OUTPUT_DIR = "Video_XcloudPhone_Da_Edit_MP4"
-SCRIPT_FILE = "kich_ban.txt"
-VIDEO_SPEED_FACTOR = ${slowDownFactor}  # 1.0 = giữ nguyên, 0.5 = làm chậm lại 2 lần nếu video cũ bị x2
+        // 2. Register MediaSession metadata so mobile OS treats this tab as an active foreground media player
+        if ('mediaSession' in navigator) {
+          try {
+            navigator.mediaSession.metadata = new MediaMetadata({
+              title: 'Đang Quay Màn Hình XcloudPhone 1p10s',
+              artist: 'XcloudPhone Auto Studio',
+              album: 'Background Recording Active'
+            });
+            navigator.mediaSession.playbackState = 'playing';
+          } catch (e) {}
+        }
 
-# Tọa độ tự động cắt vừa khung game Free Fire (bỏ thanh Chrome & Taskbar Windows):
-ENABLE_CROP_FREE_FIRE = ${cropFlag}
-TIKTOK_VERTICAL_9_16 = ${tiktokFlag}
-CROP_X_RATIO = ${cx}   # Lề trái (${state.cropX}%)
-CROP_Y_RATIO = ${cy}   # Lề trên (${state.cropY}%)
-CROP_W_RATIO = ${cw}   # Độ rộng khung Free Fire (${state.cropW}%)
-CROP_H_RATIO = ${ch}   # Độ cao khung Free Fire (${state.cropH}%)
-
-# Kịch bản đã dán sẵn từ Web App (mỗi đoạn cách nhau 1 dòng trống = 1 video):
-EMBEDDED_SCRIPTS = """${safeTripleQuoted}"""
-
-def normalize_vietnamese_phonetics(text):
-    """Phiên âm các thuật ngữ tiếng Anh sang âm Tiếng Việt có dấu để đọc rõ từng chữ."""
-    replacements = [
-        (r"(?i)XcloudPhone", "Ích Cờ Lao Phôn"),
-        (r"(?i)XCloud\\s*Phone", "Ích Cờ Lao Phôn"),
-        (r"(?i)Cloud\\s*Phone", "Cờ Lao Phôn"),
-        (r"(?i)Free\\s*Fire", "Phờ Ri Phai"),
-        (r"(?i)Max\\s*Setting", "Mắc Sét Tinh"),
-        (r"(?i)\\bFPS\\b", "Ép Pê Ét"),
-        (r"(?i)\\bsmartphone\\b", "điện thoại thông minh"),
-        (r"(?i)\\bAndroid\\b", "An Đờ Roi"),
-    ]
-    out = text
-    for pat, rep in replacements:
-        out = re.sub(pat, rep, out)
-    return out
-
-def split_into_subtitle_chunks(paragraph, max_chars=65):
-    """Tách đoạn văn ~1000 ký tự thành từng câu phụ đề ngắn gọn để hiển thị trên video."""
-    sentences = re.split(r'(?<=[.!?;,])\\s+', paragraph.strip())
-    chunks = []
-    current = ""
-    for sent in sentences:
-        words = sent.split()
-        for w in words:
-            if len(current) + len(w) + 1 <= max_chars:
-                current = f"{current} {w}".strip()
-            else:
-                if current:
-                    chunks.append(current)
-                current = w
-        if current:
-            chunks.append(current)
-            current = ""
-    return chunks if chunks else [paragraph.strip()[:max_chars]]
-
-def get_vietnamese_font(font_size=28):
-    """Tự động lấy font hỗ trợ tiếng Việt có sẵn trên Windows/Mac/Linux."""
-    candidates = [
-        "C:/Windows/Fonts/arialbd.ttf",
-        "C:/Windows/Fonts/segoeuib.ttf",
-        "C:/Windows/Fonts/tahomabd.ttf",
-        "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf",
-        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
-    ]
-    for path in candidates:
-        if os.path.exists(path):
-            return ImageFont.truetype(path, font_size)
-    return ImageFont.load_default()
-
-def crop_free_fire_region(frame_bgr):
-    """Cắt lấy đúng vùng khung đang chơi Free Fire (có dư nhẹ viền) và đóng khung TikTok 9:16 nếu bật."""
-    h, w, _ = frame_bgr.shape
-    if ENABLE_CROP_FREE_FIRE:
-        x1 = max(0, int(w * CROP_X_RATIO))
-        y1 = max(0, int(h * CROP_Y_RATIO))
-        cw = min(w - x1, int(w * CROP_W_RATIO))
-        ch = min(h - y1, int(h * CROP_H_RATIO))
-        cropped = frame_bgr[y1:y1 + ch, x1:x1 + cw]
-    else:
-        cropped = frame_bgr
-
-    if TIKTOK_VERTICAL_9_16:
-        out_w, out_h = 720, 1280
-        bg = cv2.resize(cropped, (out_w, out_h))
-        bg = cv2.GaussianBlur(bg, (35, 35), 0)
-        bg = (bg.astype(np.float32) * 0.38).astype(np.uint8)
-        ch_c, cw_c, _ = cropped.shape
-        fg_w = out_w
-        fg_h = int((ch_c / max(1, cw_c)) * fg_w)
-        fg = cv2.resize(cropped, (fg_w, fg_h))
-        y_off = int((out_h - fg_h) * 0.40)
-        bg[y_off:y_off + fg_h, 0:fg_w] = fg
-        return bg
-
-    ch_f, cw_f, _ = cropped.shape
-    return cropped[:ch_f - (ch_f % 2), :cw_f - (cw_f % 2)]
-
-def draw_subtitle_on_frame(frame_bgr, subtitle_text, font):
-    """Vẽ phụ đề tiếng Việt màu vàng viền đen có hộp mờ chuẩn CapCut/TikTok."""
-    if not subtitle_text:
-        return frame_bgr
-    h, w, _ = frame_bgr.shape
-    img_pil = Image.fromarray(cv2.cvtColor(frame_bgr, cv2.COLOR_BGR2RGB))
-    draw = ImageDraw.Draw(img_pil, "RGBA")
-
-    wrapped_lines = textwrap.wrap(subtitle_text, width=42)[:2]
-    line_heights = []
-    line_widths = []
-    for line in wrapped_lines:
-        bbox = draw.textbbox((0, 0), line, font=font)
-        line_widths.append(bbox[2] - bbox[0])
-        line_heights.append(bbox[3] - bbox[1] + 10)
-
-    box_w = max(line_widths, default=200) + 44
-    box_h = sum(line_heights) + 24
-    box_x1 = max(14, (w - box_w) // 2)
-    box_y1 = int(h * 0.82) - (box_h // 2)
-    box_x2 = min(w - 14, box_x1 + box_w)
-    box_y2 = min(h - 14, box_y1 + box_h)
-
-    draw.rounded_rectangle(
-        [box_x1, box_y1, box_x2, box_y2],
-        radius=14,
-        fill=(10, 15, 28, 215),
-        outline=(250, 204, 21, 185),
-        width=2,
-    )
-
-    curr_y = box_y1 + 12
-    for idx, line in enumerate(wrapped_lines):
-        lw = line_widths[idx]
-        lx = (w - lw) // 2
-        for dx, dy in [(-2, -2), (2, -2), (-2, 2), (2, 2), (0, 2)]:
-            draw.text((lx + dx, curr_y + dy), line, font=font, fill=(0, 0, 0, 255))
-        draw.text((lx, curr_y), line, font=font, fill=(250, 204, 21, 255))
-        curr_y += line_heights[idx]
-
-    return cv2.cvtColor(np.array(img_pil), cv2.COLOR_RGB2BGR)
-
-async def generate_female_ai_voice(text, out_mp3_path, target_duration_sec=70.0):
-    """Tạo giọng đọc AI Tiếng Việt chuẩn có dấu rõ ràng."""
-    spoken_text = normalize_vietnamese_phonetics(text.strip())
-    char_len = len(spoken_text)
-    estimated_sec = char_len / 14.5
-    rate_str = "+0%"
-    if estimated_sec > target_duration_sec * 0.95:
-        speed_pct = min(45, max(5, int(((estimated_sec / (target_duration_sec * 0.92)) - 1.0) * 100)))
-        rate_str = f"+{speed_pct}%"
-    communicate = edge_tts.Communicate(text=spoken_text, voice=VOICE_NAME, rate=rate_str)
-    await communicate.save(out_mp3_path)
-
-def process_single_video(video_path, script_text, index, total):
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    cap = cv2.VideoCapture(video_path)
-    raw_fps = cap.get(cv2.CAP_PROP_FPS)
-    if not raw_fps or raw_fps <= 1 or raw_fps > 120:
-        raw_fps = 30.0
-    out_fps = raw_fps * VIDEO_SPEED_FACTOR
-    src_w = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-    src_h = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    total_frames = int(cap.get(cv2.CAP_PROP_FRAME_COUNT))
-    duration_sec = (total_frames / out_fps) if (out_fps > 0 and total_frames > 0) else 70.0
-
-    if TIKTOK_VERTICAL_9_16:
-        out_w, out_h = 720, 1280
-    elif ENABLE_CROP_FREE_FIRE:
-        out_w = int(src_w * CROP_W_RATIO)
-        out_h = int(src_h * CROP_H_RATIO)
-    else:
-        out_w, out_h = src_w, src_h
-    out_w = out_w - (out_w % 2)
-    out_h = out_h - (out_h % 2)
-
-    font_size = max(20, int(out_h * 0.045))
-    font = get_vietnamese_font(font_size)
-    chunks = split_into_subtitle_chunks(script_text, max_chars=65)
-    total_chars = sum(len(c) for c in chunks) or 1
-
-    cue_timings = []
-    acc_time = 0.0
-    for c in chunks:
-        c_dur = (len(c) / total_chars) * duration_sec
-        cue_timings.append((acc_time, acc_time + c_dur, c))
-        acc_time += c_dur
-
-    print(f"\\n🎙️ [{index}/{total}] Đang tạo giọng AI Tiếng Việt ({VOICE_NAME}) cho đoạn #{index}...")
-    temp_dir = tempfile.mkdtemp()
-    tts_mp3 = os.path.join(temp_dir, f"voice_{index}.mp3")
-    temp_silent_mp4 = os.path.join(temp_dir, f"sub_video_{index}.mp4")
-
-    asyncio.run(generate_female_ai_voice(script_text, tts_mp3, duration_sec))
-
-    print(f"✂️ [{index}/{total}] Đang cắt khung Free Fire ({out_w}x{out_h}) & chèn phụ đề: {os.path.basename(video_path)}...")
-    fourcc = cv2.VideoWriter_fourcc(*"mp4v")
-    writer = cv2.VideoWriter(temp_silent_mp4, fourcc, out_fps, (out_w, out_h))
-
-    frame_idx = 0
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            break
-        cropped = crop_free_fire_region(frame)
-        if cropped.shape[1] != out_w or cropped.shape[0] != out_h:
-            cropped = cv2.resize(cropped, (out_w, out_h))
-
-        curr_sec = frame_idx / out_fps
-        active_sub = chunks[-1]
-        for st, et, txt in cue_timings:
-            if st <= curr_sec <= et:
-                active_sub = txt
-                break
-        frame_sub = draw_subtitle_on_frame(cropped, active_sub, font)
-        writer.write(frame_sub)
-        frame_idx += 1
-        if frame_idx % 30 == 0 or frame_idx == total_frames:
-            pct = min(100, int((frame_idx / max(1, total_frames)) * 100))
-            print(f"\\r   ⏳ Đang cắt khung & vẽ phụ đề: {pct}% ({frame_idx}/{max(1, total_frames)} frames)", end="", flush=True)
-
-    cap.release()
-    writer.release()
-
-    out_filename = os.path.join(OUTPUT_DIR, f"Video_{index}_XcloudPhone_FreeFire.mp4")
-    ffmpeg_exe = imageio_ffmpeg.get_ffmpeg_exe()
-    cmd = [
-        ffmpeg_exe, "-y",
-        "-i", temp_silent_mp4,
-        "-i", tts_mp3,
-        "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-pix_fmt", "yuv420p",
-        "-c:a", "aac", "-b:a", "192k",
-        "-map", "0:v:0", "-map", "1:a:0",
-        "-shortest",
-        out_filename
-    ]
-    res = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    if res.returncode != 0 or not os.path.exists(out_filename):
-        cmd_fallback = [
-            ffmpeg_exe, "-y",
-            "-i", temp_silent_mp4,
-            "-i", tts_mp3,
-            "-c:v", "copy",
-            "-c:a", "aac",
-            "-map", "0:v:0", "-map", "1:a:0",
-            "-shortest",
-            out_filename
-        ]
-        subprocess.run(cmd_fallback, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-    print(f"\\n✅ [XONG VIDEO {index}/{total}] Đã xuất chuẩn .MP4 (Có tiếng đọc AI + Phụ đề): {out_filename}")
-
-def main():
-    print("=" * 70)
-    print("  TOOL CẮT KHUNG FREE FIRE + EDIT 20 VIDEO + PHỤ ĐỀ + GIỌNG TIẾNG VIỆT")
-    print("=" * 70)
-
-    if not os.path.exists(SCRIPT_FILE):
-        with open(SCRIPT_FILE, "w", encoding="utf-8") as f:
-            f.write(EMBEDDED_SCRIPTS.strip() + "\\n")
-        print(f"📝 Đã tạo sẵn file '{SCRIPT_FILE}' chứa các đoạn kịch bản của mày.")
-
-    with open(SCRIPT_FILE, "r", encoding="utf-8") as f:
-        raw_text = f.read()
-
-    paragraphs = [p.strip() for p in re.split(r"\\n\\s*\\n", raw_text) if p.strip()]
-    print(f"✅ Đã đọc được {len(paragraphs)} đoạn kịch bản từ '{SCRIPT_FILE}'.")
-
-    print("📂 Đang mở cửa sổ chọn video... Hãy bôi đen chọn các video cần edit (1 - 20+ video)!")
-    root = tk.Tk()
-    root.withdraw()
-    root.attributes("-topmost", True)
-    video_files = list(filedialog.askopenfilenames(
-        title="Chọn các video cần cắt khung Free Fire + ghép Phụ đề & Giọng AI",
-        filetypes=[("Video files", "*.mp4 *.webm *.mkv *.mov *.avi"), ("All files", "*.*")]
-    ))
-
-    if not video_files:
-        print("❌ Mày chưa chọn video nào!")
-        return
-
-    count = min(len(video_files), len(paragraphs))
-    print(f"\\n🚀 Bắt đầu cắt khung Free Fire & ghép Giọng Tiếng Việt cho {count} video...")
-
-    for i in range(count):
-        process_single_video(video_files[i], paragraphs[i], i + 1, count)
-
-    print("\\n" + "=" * 70)
-    print(f"🎉 HOÀN TẤT {count} VIDEO CHUẨN MP4! Mở thư mục sau để lấy video:")
-    print(f"📂 {os.path.abspath(OUTPUT_DIR)}")
-    print("=" * 70)
-
-if __name__ == "__main__":
-    main()
-`;
+        // 3. Request Screen WakeLock so phone screen never turns off mid-recording
+        if ('wakeLock' in navigator && navigator.wakeLock.request) {
+          wakeLockSentinel = await navigator.wakeLock.request('screen').catch(() => null);
+        }
+      } catch (e) {}
     }
+
+    function stopBackgroundKeepAlive() {
+      try {
+        if (el.bgKeepAliveAudio) {
+          el.bgKeepAliveAudio.pause();
+        }
+        if ('mediaSession' in navigator) {
+          navigator.mediaSession.playbackState = 'none';
+        }
+        if (wakeLockSentinel && wakeLockSentinel.release) {
+          wakeLockSentinel.release().catch(() => {});
+          wakeLockSentinel = null;
+        }
+        document.title = 'XcloudPhone Free Fire Studio — Quay 1p10s, Cắt Khung Free Fire & Edit Hàng Loạt';
+      } catch (e) {}
+    }
+
+    // Prevent browser from pausing internal videos when user switches to another tab!
+    document.addEventListener('visibilitychange', () => {
+      if (state.isRunning || state.isBatchEditing) {
+        if (state.audioCtx && state.audioCtx.state === 'suspended') {
+          state.audioCtx.resume().catch(() => {});
+        }
+        if (el.bgKeepAliveAudio && el.bgKeepAliveAudio.paused) {
+          el.bgKeepAliveAudio.play().catch(() => {});
+        }
+        if (el.liveVideoPreview && el.liveVideoPreview.srcObject && el.liveVideoPreview.paused) {
+          el.liveVideoPreview.play().catch(() => {});
+        }
+        if (el.hiddenMobileSourceVideo && el.hiddenMobileSourceVideo.src && el.hiddenMobileSourceVideo.paused) {
+          el.hiddenMobileSourceVideo.play().catch(() => {});
+        }
+        if (el.hiddenSourceVideo && el.hiddenSourceVideo.src && el.hiddenSourceVideo.paused && state.isBatchEditing) {
+          el.hiddenSourceVideo.play().catch(() => {});
+        }
+      }
+    });
 
     function refreshPythonCodeBlocks() {
-      el.pythonCodeBlock.textContent = buildPythonRecorderScript();
-      el.pythonEditorCodeBlock.textContent = buildPythonEditorScript(
-        el.textareaBatchScripts.value.trim() || SAMPLE_THREE_SCRIPTS
-      );
+      // Code blocks removed to protect source code
     }
 
     // =========================================================================
@@ -2178,22 +1397,17 @@ if __name__ == "__main__":
 
       el.panelBatchEditor.classList.toggle('hidden', tabName !== 'editor');
       el.panelWebRecorder.classList.toggle('hidden', tabName !== 'recorder');
-      el.panelPythonScript.classList.toggle('hidden', tabName !== 'python');
 
       el.tabBtnEditor.className = tabName === 'editor' ? activeCls : inactiveCls;
       el.tabBtnWeb.className = tabName === 'recorder' ? activeCls : inactiveCls;
-      el.tabBtnPython.className = tabName === 'python' ? activeCls : inactiveCls;
 
-      if (tabName === 'python') {
-        refreshPythonCodeBlocks();
-      } else if (tabName === 'editor') {
+      if (tabName === 'editor') {
         loadActivePairVideoIntoPreview(state.previewPairIdx, true);
       }
     }
 
     el.tabBtnEditor.addEventListener('click', () => switchActiveTab('editor'));
     el.tabBtnWeb.addEventListener('click', () => switchActiveTab('recorder'));
-    el.tabBtnPython.addEventListener('click', () => switchActiveTab('python'));
 
     // =========================================================================
     // CONTINUOUS VIDEO PREVIEW PLAYER (PLAYS RECORDED OR UPLOADED VIDEO LIVE)
@@ -3722,32 +2936,7 @@ if __name__ == "__main__":
       showToast(`Đã tải xuống ${state.parsedScripts.length} file phụ đề .SRT khớp từng câu!`, '📝');
     });
 
-    function downloadPythonEditorFile() {
-      const currentScripts = el.textareaBatchScripts.value.trim() || SAMPLE_THREE_SCRIPTS;
-      const pyCode = buildPythonEditorScript(currentScripts);
-      const blob = new Blob([pyCode], { type: 'text/x-python;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'xcloudphone_editor_ai.py';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      setTimeout(() => URL.revokeObjectURL(url), 2000);
-      showToast('Đã tải xcloudphone_editor_ai.py (Xuất chuẩn .MP4 H.264 + Giọng Tiếng Việt Có Dấu)!', '🐍');
-    }
-
-    el.btnDownloadPreloadedPythonEditor.addEventListener('click', downloadPythonEditorFile);
-    if (el.btnBottomExportPythonScript) {
-      el.btnBottomExportPythonScript.addEventListener('click', downloadPythonEditorFile);
-    }
-
-    el.btnCopyEditorPythonCode.addEventListener('click', () => {
-      const currentScripts = el.textareaBatchScripts.value.trim() || SAMPLE_THREE_SCRIPTS;
-      copyTextSafe(buildPythonEditorScript(currentScripts));
-    });
-
-    el.btnDownloadEditorPythonFile.addEventListener('click', downloadPythonEditorFile);
+    // Python download buttons removed to protect proprietary code
 
     // =========================================================================
     // MP4 PRIORITIZED MEDIA RECORDER + GUARANTEED VIETNAMESE VOICE TRACK MUXING
@@ -3942,16 +3131,20 @@ if __name__ == "__main__":
             speakVietnameseFemale(scriptText, renderDurationSec, null, pairIdx);
           }
 
+          await startBackgroundKeepAlive();
           const startMs = performance.now();
           const totalMs = renderDurationSec * 1000;
 
-          const interval = setInterval(() => {
+          const interval = bgWorkerTimer.setInterval(() => {
             if (state.stopBatchEditRequested) {
-              clearInterval(interval);
+              bgWorkerTimer.clearInterval(interval);
               if (recorder.state === 'recording') {
                 try { recorder.stop(); } catch (e) {}
               }
               return;
+            }
+            if (useVideoEl && useVideoEl.paused) {
+              useVideoEl.play().catch(() => {});
             }
             const elapsedMs = performance.now() - startMs;
             const elapsedSec = elapsedMs / 1000;
@@ -3972,16 +3165,18 @@ if __name__ == "__main__":
             el.barEditorBatchProgress.style.width = `${pct}%`;
 
             const remainSec = Math.max(0, Math.ceil((totalMs - elapsedMs) / 1000));
-            el.txtEditorBatchProgressLabel.textContent = `🎬 Đang xuất MP4 Video #${pairIdx + 1} (Có Âm Thanh + Giọng Đọc + Sub) • Còn ${remainSec}s / ${renderDurationSec}s`;
+            el.txtEditorBatchProgressLabel.textContent = `🎬 Đang xuất MP4 Video #${pairIdx + 1} (Chạy Ngầm Không Dừng) • Còn ${remainSec}s / ${renderDurationSec}s`;
+            document.title = `🎬 [${pct}%] Đang xuất Video #${pairIdx + 1} (Còn ${remainSec}s)`;
 
             if (elapsedMs >= totalMs && recorder.state === 'recording') {
-              clearInterval(interval);
+              bgWorkerTimer.clearInterval(interval);
               try { recorder.stop(); } catch (e) {}
             }
           }, 33);
 
           recorder.onstop = () => {
-            clearInterval(interval);
+            bgWorkerTimer.clearInterval(interval);
+            stopBackgroundKeepAlive();
             if (voiceSourceNode) {
               try { voiceSourceNode.stop(); } catch (e) {}
             }
@@ -4001,7 +3196,8 @@ if __name__ == "__main__":
           };
 
           recorder.onerror = (err) => {
-            clearInterval(interval);
+            bgWorkerTimer.clearInterval(interval);
+            stopBackgroundKeepAlive();
             if (voiceSourceNode) {
               try { voiceSourceNode.stop(); } catch (e) {}
             }
@@ -4305,12 +3501,15 @@ if __name__ == "__main__":
       const intervalMs = Math.round(1000 / (fps || 30));
 
       if (state.demoAnimFrame) {
-        clearInterval(state.demoAnimFrame);
+        bgWorkerTimer.clearInterval(state.demoAnimFrame);
         state.demoAnimFrame = null;
       }
 
-      state.demoAnimFrame = setInterval(() => {
+      const drawSingleFrame = () => {
         if (!state.isRunning) return;
+        if (sourceVideoOrNull && sourceVideoOrNull.paused) {
+          sourceVideoOrNull.play().catch(() => {});
+        }
         if (sourceVideoOrNull && sourceVideoOrNull.readyState >= 2) {
           const vw = sourceVideoOrNull.videoWidth || 1280;
           const vh = sourceVideoOrNull.videoHeight || 720;
@@ -4326,17 +3525,39 @@ if __name__ == "__main__":
           const sy = state.enableCrop ? (state.cropY / 100) * srcH : 0;
           const sw = state.enableCrop ? (state.cropW / 100) * srcW : srcW;
           const sh = state.enableCrop ? (state.cropH / 100) * srcH : srcH;
-          ctx.drawImage(refImg, sx, sy, sw, sh, 0, 0, canvas.width, canvas.height);
+          const tSec = performance.now() / 1000;
+          const panX = Math.sin(tSec * 1.3) * 5;
+          ctx.drawImage(refImg, Math.max(0, sx + panX), sy, sw, sh, 0, 0, canvas.width, canvas.height);
         } else {
           ctx.fillStyle = '#0f172a';
           ctx.fillRect(0, 0, canvas.width, canvas.height);
         }
-      }, intervalMs);
+      };
 
-      const lockedCanvasStream = canvas.captureStream(fps || 30);
-      if (rawDisplayStream) {
-        const audioTracks = rawDisplayStream.getAudioTracks();
-        audioTracks.forEach((at) => lockedCanvasStream.addTrack(at));
+      // Draw initial frame before calling captureStream (required on iOS Safari!)
+      drawSingleFrame();
+      state.demoAnimFrame = bgWorkerTimer.setInterval(drawSingleFrame, intervalMs);
+
+      const lockedCanvasStream = canvas.captureStream ? canvas.captureStream(fps || 30) : canvas.mozCaptureStream(fps || 30);
+      if (rawDisplayStream && rawDisplayStream.getAudioTracks().length > 0) {
+        rawDisplayStream.getAudioTracks().forEach((at) => lockedCanvasStream.addTrack(at));
+      } else {
+        // Attach a clean WebAudio silent keep-alive track so iOS Safari & Android Chrome keep MediaRecorder active in background tabs!
+        try {
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (AudioContextClass) {
+            if (!state.audioCtx) state.audioCtx = new AudioContextClass();
+            if (state.audioCtx.state === 'suspended') state.audioCtx.resume().catch(() => {});
+            const dest = state.audioCtx.createMediaStreamDestination();
+            const osc = state.audioCtx.createOscillator();
+            const gain = state.audioCtx.createGain();
+            gain.gain.value = 0.0001;
+            osc.connect(gain);
+            gain.connect(dest);
+            osc.start();
+            dest.stream.getAudioTracks().forEach((at) => lockedCanvasStream.addTrack(at));
+          }
+        } catch (e) {}
       }
       return lockedCanvasStream;
     }
@@ -4345,9 +3566,9 @@ if __name__ == "__main__":
       return new Promise((resolve) => {
         const start = performance.now();
         const totalMs = seconds * 1000;
-        const timer = setInterval(() => {
+        const timer = bgWorkerTimer.setInterval(() => {
           if (state.stopRequested) {
-            clearInterval(timer);
+            bgWorkerTimer.clearInterval(timer);
             resolve(false);
             return;
           }
@@ -4355,7 +3576,7 @@ if __name__ == "__main__":
           const remainSec = Math.max(0, (totalMs - elapsedMs) / 1000);
           if (onTick) onTick(remainSec, elapsedMs / 1000);
           if (elapsedMs >= totalMs) {
-            clearInterval(timer);
+            bgWorkerTimer.clearInterval(timer);
             resolve(true);
           }
         }, 80);
@@ -4377,10 +3598,12 @@ if __name__ == "__main__":
         const startTime = performance.now();
         const durationMs = durationSec * 1000;
 
-        const tickInterval = setInterval(() => {
+        const tickInterval = bgWorkerTimer.setInterval(() => {
           const elapsedMs = performance.now() - startTime;
           const remainSec = Math.max(0, (durationMs - elapsedMs) / 1000);
-          el.txtBigClock.textContent = formatClock(remainSec);
+          const clockStr = formatClock(remainSec);
+          el.txtBigClock.textContent = clockStr;
+          document.title = `🔴 [${clockStr}] Đang quay Video ${videoIndex}/${totalVideos} — XcloudPhone`;
 
           const completedUnits = (videoIndex - 1) + Math.min(1, elapsedMs / durationMs);
           const pct = Math.min(100, Math.round((completedUnits / totalVideos) * 100));
@@ -4388,20 +3611,20 @@ if __name__ == "__main__":
           el.barBatchProgress.style.width = `${pct}%`;
 
           if (elapsedMs >= durationMs && recorder.state === 'recording') {
-            clearInterval(tickInterval);
-            recorder.stop();
+            bgWorkerTimer.clearInterval(tickInterval);
+            try { recorder.stop(); } catch (e) {}
           }
         }, 50);
 
         recorder.onstop = () => {
-          clearInterval(tickInterval);
+          bgWorkerTimer.clearInterval(tickInterval);
           const finalMime = recorder.mimeType || 'video/mp4';
           const blob = new Blob(chunks, { type: finalMime });
           resolve({ blob, ext: 'mp4', durationSec });
         };
 
         recorder.onerror = (err) => {
-          clearInterval(tickInterval);
+          bgWorkerTimer.clearInterval(tickInterval);
           reject(err);
         };
 
@@ -4518,8 +3741,9 @@ if __name__ == "__main__":
     }
 
     function stopAllStreams() {
+      stopBackgroundKeepAlive();
       if (state.demoAnimFrame) {
-        clearInterval(state.demoAnimFrame);
+        bgWorkerTimer.clearInterval(state.demoAnimFrame);
         state.demoAnimFrame = null;
       }
       if (state.mediaRecorder && state.mediaRecorder.state === 'recording') {
@@ -4643,6 +3867,8 @@ if __name__ == "__main__":
         }
       }
 
+      await startBackgroundKeepAlive();
+
       if (countdownSec > 0) {
         el.statusIndicatorDot.className = 'w-3 h-3 rounded-full bg-amber-400 rec-dot';
         for (let c = countdownSec; c > 0; c--) {
@@ -4667,6 +3893,14 @@ if __name__ == "__main__":
         playBeep(880, 180);
 
         try {
+          if (usingMobileSourceVideo && el.hiddenMobileSourceVideo && state.mobileSourceDurationSec > durationSec) {
+            const maxOffset = Math.max(0, state.mobileSourceDurationSec - durationSec);
+            const targetOffset = Math.min(maxOffset, (i - 1) * durationSec);
+            try {
+              el.hiddenMobileSourceVideo.currentTime = targetOffset;
+              await el.hiddenMobileSourceVideo.play().catch(() => {});
+            } catch (e) {}
+          }
           const result = await recordSingleVideoSegment(recordStream, durationSec, i, totalVideos);
           if (!state.stopRequested || result.blob.size > 0) {
             completedCount += 1;
@@ -4728,73 +3962,19 @@ if __name__ == "__main__":
     });
 
     // =========================================================================
-    // EXPORT / COPY HELPERS
+    // SOURCE CODE PROTECTION (CHỐNG XEM TRỘM CODE KHI BÁN CHO KHÁCH)
     // =========================================================================
-    function copyTextSafe(text) {
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(text).then(() => {
-          showToast('Đã copy code Python vào Clipboard!', '📋');
-        }).catch(() => fallbackCopy(text));
-      } else {
-        fallbackCopy(text);
+    document.addEventListener('keydown', (e) => {
+      // Block Ctrl+U (View Source), Ctrl+S (Save HTML), F12 / Ctrl+Shift+I
+      if (
+        e.key === 'F12' ||
+        (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'i' || e.key === 'J' || e.key === 'j'))
+      ) {
+        e.preventDefault();
+        showToast('🔒 Bản quyền XcloudPhone Auto Studio đã được bảo vệ!', '🛡️');
       }
-    }
-
-    function fallbackCopy(text) {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.opacity = '0';
-      document.body.appendChild(ta);
-      ta.select();
-      try {
-        document.execCommand('copy');
-        showToast('Đã copy code Python vào Clipboard!', '📋');
-      } catch (e) {
-        showToast('Không thể copy tự động, hãy bôi đen code để copy.', '⚠️');
-      }
-      document.body.removeChild(ta);
-    }
-
-    el.btnCopyPythonCode.addEventListener('click', () => {
-      copyTextSafe(buildPythonRecorderScript());
     });
-
-    el.btnDownloadPythonFile.addEventListener('click', () => {
-      const blob = new Blob([buildPythonRecorderScript()], { type: 'text/x-python;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'xcloudphone_recorder.py';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      setTimeout(() => URL.revokeObjectURL(url), 2000);
-      showToast('Đã tải file xcloudphone_recorder.py (Chuẩn MP4 H.264 + Không bị x2) về máy!', '🐍');
-    });
-
-    function downloadCleanIndexHtmlForGithub() {
-      const clonedDoc = document.cloneNode(true);
-      clonedDoc.querySelectorAll('[data-bard-client-injected="true"]').forEach((node) => node.remove());
-      const modalEl = clonedDoc.getElementById('modalMobileGithubGuide');
-      if (modalEl) modalEl.classList.add('hidden');
-      const htmlSource = '<!DOCTYPE html>\n' + clonedDoc.documentElement.outerHTML;
-      const blob = new Blob([htmlSource], { type: 'text/html;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'index.html';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      setTimeout(() => URL.revokeObjectURL(url), 2000);
-      showToast('Đã tải file index.html chuẩn! Mày có thể up thẳng lên GitHub Pages hoặc gửi qua Zalo/Điện thoại xài ngay!', '⬇️');
-    }
-
-    el.btnDownloadStandaloneHtml.addEventListener('click', downloadCleanIndexHtmlForGithub);
-    if (el.btnModalDownloadIndexHtml) {
-      el.btnModalDownloadIndexHtml.addEventListener('click', downloadCleanIndexHtmlForGithub);
-    }
 
     // Modal Open / Close Handlers
     if (el.btnOpenMobileGithubGuide && el.modalMobileGithubGuide) {
@@ -4854,12 +4034,12 @@ if __name__ == "__main__":
 
     // Floating Picture-in-Picture (PiP) 01:10 Countdown Timer for Mobile Screen Recording
     function startPipCanvasRenderLoop() {
-      if (state.pipAnimInterval) clearInterval(state.pipAnimInterval);
+      if (state.pipAnimInterval) bgWorkerTimer.clearInterval(state.pipAnimInterval);
       const canvas = el.pipTimerCanvas;
       if (!canvas) return;
       const ctx = canvas.getContext('2d');
 
-      state.pipAnimInterval = setInterval(() => {
+      state.pipAnimInterval = bgWorkerTimer.setInterval(() => {
         ctx.fillStyle = '#090d16';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
 
